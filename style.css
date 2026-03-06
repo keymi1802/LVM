@@ -1,0 +1,308 @@
+/* VARIABLES DE COLOR DEL DEPARTAMENTO */
+:root{
+--azul-principal:#0E3AB1;
+--azul-acento:#2CC4FC;
+--azul-secundario:#099DF3;
+--negro-cientifico:#020A20;
+--blanco-suave:#FFF9FB;
+}
+
+/* CONFIGURACION GENERAL */
+body{
+margin:0;
+font-family:'Montserrat', sans-serif;
+background:var(--negro-cientifico);
+color:var(--blanco-suave);
+}
+
+/* HERO */
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+/* VIDEO */
+.video-bg{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+
+/* OSCURECER VIDEO */
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(2,10,32,0.65);
+}
+
+/* BARRA SUPERIOR */
+.top-bar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 40px;
+z-index:1000;
+transition:0.4s;
+}
+
+/* CUANDO HACES SCROLL */
+.top-bar.scrolled{
+background:rgba(2,10,32,0.9);
+backdrop-filter:blur(8px);
+box-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* LOGO */
+.logo-fixed img{
+width:110px;
+transition:0.3s;
+}
+
+/* LOGO MAS PEQUEÑO AL SCROLL */
+.top-bar.scrolled img{
+width:90px;
+}
+
+/* TEXTO PRINCIPAL */
+.hero-text{
+position:absolute;
+top:40%;
+left:80px;
+transform:translateY(-50%);
+color:var(--blanco-suave);
+max-width:700px;
+z-index:3;
+}
+
+.hero-text h1{
+font-size:60px;
+font-weight:600;
+line-height:1;
+color:var(--azul-principal);
+
+/* CONTORNO */
+text-shadow:
+-1px -1px 0 #1C177F,
+1px -1px 0 #1C177F,
+-1px 1px 0 #1C177F,
+1px 1px 0 #1C177F;
+}
+
+.hero-text p{
+font-size:20px;
+opacity:0.9;
+}
+
+/* MENU DERECHO */
+.menu-right{
+position:fixed;
+right:0;
+top:50%;
+transform:translateY(-50%);
+z-index:10;
+}
+.menu-right ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+.menu-right li{
+margin:12px 0;
+}
+
+/* BOTONES MENU */
+.menu-right a{
+display:flex;
+align-items:center;
+background:rgba(2,10,32,0.85);
+color:var(--blanco-suave);
+text-decoration:none;
+padding:15px;
+border-radius:12px 0 0 12px;
+width:55px;
+overflow:hidden;
+transition:0.4s;
+backdrop-filter:blur(10px);
+}
+
+/* ICONOS */
+.menu-right i{
+font-size:22px;
+min-width:30px;
+}
+
+/* TEXTO MENU */
+.menu-right span{
+margin-left:15px;
+white-space:nowrap;
+opacity:0;
+transition:0.3s;
+}
+
+/* HOVER MENU */
+.menu-right a:hover{
+width:260px;
+background:#020A20;
+color:#FFF9FB;
+}
+.menu-right a:hover span{
+opacity:1;
+}
+
+/* SECCION ACERCA */
+.about-section{
+display:flex;
+min-height:450px;
+}
+
+/* MITAD IZQUIERDA */
+.about-left{
+flex:1;
+background:#0E3AB1;
+color:#FFF9FB;
+padding:80px;
+}
+.about-left h2{
+font-size:38px;
+margin-bottom:25px;
+}
+.about-left p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+/* MITAD DERECHA */
+.about-right{
+flex:1;
+background:#020A20;
+color:#FFF9FB;
+padding:80px;
+}
+
+.about-right h2{
+font-size:38px;
+margin-bottom:25px;
+}
+
+.about-right p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+/* BOTONES */
+.btn{
+background:var(--blanco-suave);
+border:none;
+padding:15px 30px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:var(--azul-secundario);
+color:var(--blanco-suave);
+}
+
+/* BOTON CLARO */
+.btn-light{
+background:var(--blanco-suave);
+border:none;
+padding:15px 30px;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-light:hover{
+background:var(--negro-cientifico);
+color:var(--blanco-suave);
+}
+
+.projects{
+background:white;
+padding:70px 10%;
+}
+
+.section-title{
+font-size:38px;
+color:#1e40af;
+margin-bottom:40px;
+}
+
+.slider-container{
+display:flex;
+align-items:center;
+position:relative;
+}
+
+.project-slider{
+display:flex;
+overflow-x:auto;
+scroll-behavior:smooth;
+gap:30px;
+}
+
+.project-card{
+min-width:320px;
+border-top:2px solid #ddd;
+padding-top:15px;
+}
+
+.project-card h3{
+font-size:18px;
+color:#1f2d3d;
+margin-bottom:10px;
+}
+
+.project-card p{
+font-size:14px;
+color:#555;
+margin-bottom:10px;
+}
+
+.project-card span{
+display:block;
+font-size:13px;
+color:#777;
+}
+
+.nav{
+background:#1e40af;
+color:white;
+border:none;
+font-size:22px;
+padding:10px 15px;
+cursor:pointer;
+border-radius:6px;
+margin:0 10px;
+}
+
+.laboratories{
+background:white;
+padding:60px 10%;
+}
+
+.lab-container{
+display:flex;
+gap:40px;
+}
+
+.lab-card{
+flex:1;
+border-top:2px solid #ddd;
+padding-top:20px;
+}
+
+.lab-card h3{
+font-size:20px;
+color:#1f2d3d;
+}
