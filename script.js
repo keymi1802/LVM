@@ -114,3 +114,22 @@ const x = e.pageX - track.offsetLeft;
 const walk = (x - startX) * 2;
 track.scrollLeft = scrollLeft - walk;
 });
+
+function showTab(tabName) {
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    // Show selected
+    const target = document.getElementById('tab-' + tabName);
+    if (target) target.classList.add('active');
+    // Activate button
+    event.target.classList.add('active');
+}
+
+function openModal() {
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
